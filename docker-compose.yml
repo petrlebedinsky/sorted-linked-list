@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./
+    environment:
+      - XDEBUG_MODE=coverage
+    volumes:
+      - .:/opt/sorted-linked-list
+    working_dir: /opt/sorted-linked-list
+
+
+

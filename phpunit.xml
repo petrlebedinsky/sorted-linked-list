@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<phpunit
+    backupGlobals="false"
+    backupStaticProperties="false"
+    beStrictAboutChangesToGlobalState="true"
+    beStrictAboutCoverageMetadata="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTestsThatDoNotTestAnything="true"
+    bootstrap="tests/bootstrap.php"
+    cacheDirectory="tmp/cache/phpunit.result.cache"
+    cacheResult="true"
+    colors="true"
+    displayDetailsOnTestsThatTriggerDeprecations="true"
+    displayDetailsOnTestsThatTriggerErrors="true"
+    displayDetailsOnTestsThatTriggerNotices="true"
+    displayDetailsOnTestsThatTriggerWarnings="true"
+    executionOrder="defects"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.3/phpunit.xsd"
+>
+    <coverage>
+        <report>
+            <html outputDirectory="tmp/coverage"/>
+            <text outputFile="php://stdout" showUncoveredFiles="true"/>
+        </report>
+    </coverage>
+
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <logging/>
+
+    <source>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </source>
+</phpunit>
